@@ -1,4 +1,4 @@
-"use client"
+
 import { useState } from "react"
 import { Menu, Search, Bell, User } from "lucide-react"
 import { useTask } from "../../context/TaskContext"

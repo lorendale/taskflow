@@ -1,5 +1,3 @@
-"use client"
-
 import { useState } from "react"
 import { useTask } from "../../context/TaskContext"
 import StatsCard from "./StatsCard"
@@ -51,30 +49,31 @@ const Dashboard = () => {
 
   return (
     <div>
-      <div
-        style={{
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "space-between",
-          marginBottom: "2rem",
-          flexWrap: "wrap",
-          gap: "1rem",
-        }}
-      >
-        <div>
-          <h1 style={{ fontSize: "1.875rem", fontWeight: "700", color: "var(--text-primary)", marginBottom: "0.5rem" }}>
-            Dashboard
-          </h1>
-          <p style={{ color: "var(--text-secondary)" }}>Welcome back! Here's what's happening with your tasks today.</p>
+      <div style={{ marginBottom: "2rem" }}>
+        <h1 style={{ fontSize: "1.875rem", fontWeight: "700", color: "var(--text-primary)", marginBottom: "0.5rem" }}>
+          Dashboard
+        </h1>
+        <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", gap: "1rem" }}>
+          <p style={{ color: "var(--text-secondary)", margin: 0 }}>
+            Welcome back! Here's what's happening with your tasks today.
+          </p>
+          <Button onClick={() => setShowTaskForm(true)} style={{ whiteSpace: "nowrap" }}>
+            <Plus size={16} />
+            Add Task
+          </Button>
         </div>
-        <Button onClick={() => setShowTaskForm(true)}>
-          <Plus size={16} />
-          Add Task
-        </Button>
       </div>
 
-      {/* Stats Cards */}
-      <div className="grid grid-cols-1 sm-grid-cols-2 lg-grid-cols-4" style={{ marginBottom: "2rem", gap: "1rem" }}>
+      {/* Stats Cards - 2x2 Grid Layout */}
+      <div
+        style={{
+          display: "grid",
+          gridTemplateColumns: "repeat(2, 1fr)",
+          gap: "1rem",
+          marginBottom: "2rem",
+        }}
+        className="stats-grid"
+      >
         {stats.map((stat, index) => (
           <StatsCard key={index} {...stat} />
         ))}

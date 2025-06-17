@@ -1,4 +1,4 @@
-"use client"
+
 import { X, LayoutDashboard, CheckSquare, Calendar, BarChart3 } from "lucide-react"
 import { useTask } from "../../context/TaskContext"
 import ProjectManager from "../Projects/ProjectManager"

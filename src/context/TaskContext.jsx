@@ -1,4 +1,3 @@
-"use client"
 
 import { createContext, useContext, useReducer, useEffect } from "react"
 import { loadFromStorage, saveToStorage, generateId } from "../utils/localStorage"

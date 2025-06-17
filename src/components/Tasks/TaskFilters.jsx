@@ -1,4 +1,4 @@
-"use client"
+
 import { useTask } from "../../context/TaskContext"
 
 const TaskFilters = () => {

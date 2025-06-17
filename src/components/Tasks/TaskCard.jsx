@@ -1,4 +1,4 @@
-"use client"
+
 import { useTask } from "../../context/TaskContext"
 import { Edit2, Trash2, Calendar, User } from "lucide-react"
 import { format } from "date-fns"

@@ -1,4 +1,3 @@
-"use client"
 
 import { useState } from "react"
 import { useTask } from "../../context/TaskContext"
@@ -51,26 +50,19 @@ const Analytics = () => {
 
   return (
     <div>
-      <div
-        style={{
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "space-between",
-          marginBottom: "2rem",
-          flexWrap: "wrap",
-          gap: "1rem",
-        }}
-      >
-        <div>
-          <h1 style={{ fontSize: "1.875rem", fontWeight: "700", color: "var(--text-primary)", marginBottom: "0.5rem" }}>
-            Analytics
-          </h1>
-          <p style={{ color: "var(--text-secondary)" }}>Insights and statistics about your task management.</p>
+      <div style={{ marginBottom: "2rem" }}>
+        <h1 style={{ fontSize: "1.875rem", fontWeight: "700", color: "var(--text-primary)", marginBottom: "0.5rem" }}>
+          Analytics
+        </h1>
+        <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", gap: "1rem" }}>
+          <p style={{ color: "var(--text-secondary)", margin: 0 }}>
+            Insights and statistics about your task management.
+          </p>
+          <Button onClick={() => setShowTaskForm(true)} style={{ whiteSpace: "nowrap" }}>
+            <Plus size={16} />
+            Add Task
+          </Button>
         </div>
-        <Button onClick={() => setShowTaskForm(true)}>
-          <Plus size={16} />
-          Add Task
-        </Button>
       </div>
 
       <div className="grid grid-cols-1 lg-grid-cols-2" style={{ gap: "2rem" }}>

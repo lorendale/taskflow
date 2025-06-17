@@ -1,7 +1,7 @@
 {
   "name": "taskflow-dashboard",
   "version": "0.1.0",
-  "homepage": "https://github.com/lorendale/taskflow.git",
+  "homepage": "https://lorendale.github.io/taskflow",
   "private": true,
   "dependencies": {
     "@testing-library/dom": "^10.4.0",
